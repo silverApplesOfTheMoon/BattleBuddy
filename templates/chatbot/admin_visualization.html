@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Data Visualization</title>
+</head>
+<body>
+    <h1>Program Data Visualizations</h1>
+    <div>
+        <h2>Completion Rates</h2>
+        <img src="data:image/png;base64,{{ completion_chart }}" alt="Completion Rates">
+    </div>
+    <div>
+        <h2>Quiz Accuracy</h2>
+        <img src="data:image/png;base64,{{ accuracy_chart }}" alt="Quiz Accuracy">
+    </div>
+    <div>
+        <h2>Entrance Exam Scores vs Completion</h2>
+        <img src="data:image/png;base64,{{ exam_completion_chart }}" alt="Exam vs Completion">
+    </div>
+</body>
+</html>
