@@ -26,6 +26,7 @@ builder.Services.AddTransient<UserService>();
 
 //builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders();
 //builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 
 

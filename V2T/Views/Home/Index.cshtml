@@ -2,73 +2,78 @@
     ViewData["Title"] = "Home Page";
 }
 
-
 <div class="container mt-4">
-    <h1 class="text-center">Welcome to Washington Vets 2 Tech</h1>
-    <p class="lead text-center">
-        Your gateway to a future in technology. We offer tailored programs for veterans transitioning to tech careers.
-    </p>
+    <div class="row align-items-center">
+        <div class="col-md-6 hero-text">
+            <h1 class="mb-3">GET STARTED IN TECH TODAY</h1>
 
-    <div class="row mt-5">
-        <!-- Section for Login and Register -->
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Join Us</h5>
-                    <p class="card-text">Already have an account? Login to access your personalized dashboard and study materials.</p>
-                    <a href="@Url.Action("Login", "Account")" class="btn btn-primary">Login</a>
-                    <!--<a href="/Account/Login" class="btn btn-primary">Login</a> -->
-                    <p class="card-text mt-3">New to Washington Vets 2 Tech? Register now to get started.</p>
-                    <a href="/Account/Register" class="btn btn-secondary">Register</a>
+            <div class="progress-container">
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                        Track Your Progress
+                    </div>
                 </div>
             </div>
+
+            <p class="hero-description">
+                Welcome to Washington Vets 2 Tech, your pathway to success in the tech industry starts here. 
+                Designed specifically for veterans and their families, our platform offers tailored entrance exams, 
+                skills assessments, and study materials to help you navigate your transition into a technology career. 
+                Explore multiple pathways, access certification practice tests, and gain the tools you need to 
+                thrive in cybersecurity, server and cloud application, or cloud application development. Empower your 
+                future today with Vets 2 Tech.
+            </p>
         </div>
 
-        <!-- Section for Study Materials -->
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Study Materials</h5>
-                    <p class="card-text">Explore our comprehensive study materials available to all visitors. Learn and grow at your own pace.</p>
-                    <a href="/Study/Index" class="btn btn-success">Explore Study Materials</a>
-                </div>
+        <div class="col-md-6 text-center mt-4 mt-md-0">
+            <div class="family-image">
+                <img src="~/images/family_military.jpg" alt="Military family" />
+                <a href="@Url.Action("Register", "Account")" class="btn btn-danger">Sign Up</a>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Cohorts Information -->
-    <div class="row mt-5">
-        <div class="col">
-            <h3 class="text-center">Our Cohorts</h3>
-            <p class="text-center">Join one of our cohorts and become part of a supportive learning community. Each cohort focuses on different areas of technology to suit your career goals.</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
+<div class="container py-5">
+    <div class="row text-center">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="~/images/image1.png" class="card-img-top" alt="Server Cloud Image" />
                 <div class="card-body">
-                    <h5 class="card-title">Cohort 1</h5>
-                    <p class="card-text">Focusing on Web Development and Design. Ideal for those interested in building and designing websites.</p>
-                    <a href="/Cohorts/Cohort1" class="btn btn-info">Learn More</a>
+                    <h5 class="card-title">Server Cloud and Application</h5>
+                    <p class="card-text">
+                        Learn how to manage and deploy cloud applications.
+                    </p>
+                    <a href="@Url.Action("ServerCloud", "Home")" class="btn-learn-more">Learn More</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="~/images/image2.png" class="card-img-top" alt="Cloud App Dev Image" />
                 <div class="card-body">
-                    <h5 class="card-title">Cohort 2</h5>
-                    <p class="card-text">Specializing in Cybersecurity. Perfect for those looking to secure and protect digital assets.</p>
-                    <a href="/Cohorts/Cohort2" class="btn btn-info">Learn More</a>
+                    <h5 class="card-title">Cloud Application Development</h5>
+                    <p class="card-text">
+                        Build modern applications with scalable cloud solutions.
+                    </p>
+                    <a href="@Url.Action("CloudAppDevelopment", "Home")" class="btn-learn-more">Learn More</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card">
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="~/images/image3.png" class="card-img-top" alt="Cybersecurity Image" />
                 <div class="card-body">
-                    <h5 class="card-title">Cohort 3</h5>
-                    <p class="card-text">Focusing on Data Science and Machine Learning. Ideal for those fascinated by data analysis and AI.</p>
-                    <a href="/Cohorts/Cohort3" class="btn btn-info">Learn More</a>
+                    <h5 class="card-title">Cybersecurity Administration</h5>
+                    <p class="card-text">
+                        Protect systems and data with hands-on security practices.
+                    </p>
+                    <a href="@Url.Action("Cybersecurity", "Home")" class="btn-learn-more">Learn More</a>
                 </div>
             </div>
         </div>

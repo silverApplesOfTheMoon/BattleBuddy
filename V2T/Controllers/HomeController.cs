@@ -24,6 +24,31 @@ namespace V2T.Controllers
         {
             return View();
         }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+        public IActionResult ServerCloud()
+        {
+            return View();
+        }
+
+        public IActionResult CloudAppDevelopment()
+        {
+            return View();
+        }
+
+        public IActionResult Cybersecurity()
+        {
+            return View();
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
