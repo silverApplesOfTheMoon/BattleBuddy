@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Chat with Your Study Buddy</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <textarea name="query" placeholder="Type your question here..."></textarea>
+        <button type="submit">Ask</button>
+    </form>
+    {% if response %}
+    <h2>Response:</h2>
+    <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>

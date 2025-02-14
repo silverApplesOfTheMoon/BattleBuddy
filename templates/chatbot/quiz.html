@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Adaptive Quiz</h1>
+    {% if question %}
+    <form method="POST">
+        {% csrf_token %}
+        <p>{{ question.question_text }}</p>
+        <input type="radio" name="option" value="A"> {{ question.option_a }}<br>
+        <input type="radio" name="option" value="B"> {{ question.option_b }}<br>
+        <input type="radio" name="option" value="C"> {{ question.option_c }}<br>
+        <input type="radio" name="option" value="D"> {{ question.option_d }}<br>
+        <input type="hidden" name="correct_option" value="{{ question.correct_option }}">
+        <button type="submit">Submit</button>
+    </form>
+    {% else %}
+    <p>No questions available at this difficulty level.</p>
+    {% endif %}
+</body>
+</html>
