@@ -1,6 +1,6 @@
 # BattleBuddy
 BattleBuddy Platform: <br>
-A Vets2Tech Senior Capstone Team Project <br>  
+A Saint Martin's University Senior Capstone Team Project <br>  
 
 Connie Rodriguez: back end developer<br>
 John McDurmon: front end develpoer<br>
