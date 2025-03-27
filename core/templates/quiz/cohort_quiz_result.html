@@ -1,0 +1,15 @@
+{% extends "shared/layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Quiz Results</h2>
+
+    <div class="alert alert-info text-center">
+        <p>{{ suggestion }}</p>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary">Return to Home</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "shared/layout.html" %}
+{% load i18n %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">{% trans "Welcome Back, Alumni!" %}</h1>
+    <p class="lead text-center">{% trans "Keep learning, stay connected, and explore new opportunities in the tech world." %}</p>
+
+    <div class="alert alert-black text-center">
+        <h4>🎓 {% trans "Stay Ahead in Your Career!" %}</h4>
+        <p>{% trans "Access job resources, networking events, and continued learning opportunities." %}</p>
+        <a href="#" class="btn btn-primary">{% trans "Join Alumni Network" %}</a>
+    </div>
+</div>
+
+{% include "home/index_content.html" %}
+{% endblock %}

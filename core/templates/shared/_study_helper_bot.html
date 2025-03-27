@@ -1,0 +1,99 @@
+{% load i18n %}
+<div id="studybot-container" class="studybot-container" role="region" aria-labelledby="studybot-title">
+  <!-- Robot circle -->
+  <div id="studybot-robot" aria-label="Study Helper Robot">
+    <div class="robot-inner">
+      <div class="studybot-antenna">
+        <div class="studybot-antenna-ball"></div>
+      </div>
+      <div class="studybot-head">
+        <div class="studybot-eyes">
+          <div class="studybot-eye studybot-eye-left"></div>
+          <div class="studybot-eye studybot-eye-right"></div>
+        </div>
+        <div class="studybot-mouth"></div>
+      </div>
+      <div class="studybot-body">
+        <div class="studybot-chest"></div>
+        <div class="studybot-arm studybot-arm-left">
+          <div class="studybot-hand studybot-hand-left"></div>
+        </div>
+        <div class="studybot-arm studybot-arm-right">
+          <div class="studybot-hand studybot-hand-right"></div>
+        </div>
+        <div class="studybot-leg studybot-leg-left">
+          <div class="studybot-foot studybot-foot-left"></div>
+        </div>
+        <div class="studybot-leg studybot-leg-right">
+          <div class="studybot-foot studybot-foot-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="studybot-bubble-container">
+    {% trans "Need help?" %} <br> {% trans "Click on me!" %}
+  </div>
+
+
+  <!-- The Chat Window-->
+  <div id="studybot-chat" role="dialog" aria-labelledby="chat-title" hidden>
+    <div class="studybot-chat-header">
+      <h5 id="chat-title">{% trans "Study Helper Chat" %}</h5>
+      <button id="studybot-close" class="studybot-close" aria-label="Close chat window">&times;</button>
+    </div>
+    <div class="chat-window" role="log">
+      <p class="chat-message">{% trans "Hello! How can I help you today?" %}</p>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input form-control" placeholder="{% trans 'Type your question...' %}" aria-label="Chat input">
+      <button class="btn chat-send" tabindex="0" role="button" aria-label="Send message">{% trans "Send" %}</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const robot       = document.getElementById("studybot-robot");
+  const bubble      = document.getElementById("studybot-bubble");
+  const chatWindow  = document.getElementById("studybot-chat");
+  const closeButton = document.getElementById("studybot-close");
+
+  robot.addEventListener("click", function () {
+    chatWindow.hidden = false; 
+    chatWindow.style.display = "block";
+    
+    chatWindow.classList.remove("closing");
+    chatWindow.classList.add("opening");
+
+    bubble.style.display = "none"; 
+  });
+
+  closeButton.addEventListener("click", function () {
+    chatWindow.classList.remove("opening");
+    chatWindow.classList.add("closing");
+
+    setTimeout(() => {
+      chatWindow.hidden = true;
+      chatWindow.style.display = "none";
+      chatWindow.classList.remove("closing");
+      bubble.style.display = "block";
+    }, 350);
+  });
+
+  // Also allow ESC key to close
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !chatWindow.hidden) {
+      chatWindow.classList.remove("opening");
+      chatWindow.classList.add("closing");
+
+      setTimeout(() => {
+        chatWindow.hidden = true;
+        chatWindow.style.display = "none";
+        chatWindow.classList.remove("closing");
+        bubble.style.display = "block";
+      }, 350);
+    }
+  });
+});
+</script>

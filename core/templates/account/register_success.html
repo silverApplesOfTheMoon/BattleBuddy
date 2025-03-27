@@ -1,0 +1,11 @@
+{% extends "shared/layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Registration Successful!</h2>
+    <p>Your account has been created. You are already signed in.</p>
+    <p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Go to Home Page</a>
+    </p>
+</div>
+{% endblock %}

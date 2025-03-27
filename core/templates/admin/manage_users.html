@@ -1,0 +1,30 @@
+{% extends "shared/layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Manage Users</h2>
+    <table id="table-bordered" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Student Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.full_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.student_type }}</td>
+                <td>
+                    <a href="{% url 'edit_user' user.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="{% url 'delete_user' user.id %}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

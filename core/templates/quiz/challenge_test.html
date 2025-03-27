@@ -1,0 +1,32 @@
+{% extends "shared/layout.html" %}
+{% block content %}
+<div class="container mt-5 quiz-container">
+    <h2 class="text-center mb-4 quiz-title">Challenge Test: {{ cohort|title }}</h2>
+
+    {% if result %}
+        <div class="alert alert-info text-center">
+            <h4>{{ result }}</h4>
+        </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+        <div class="mb-4 quiz-question">
+            <p class="quiz-question-text"><strong>{{ field.label }}</strong></p>
+            {% for choice in field %}
+            <div class="form-check">
+                {{ choice.tag }} 
+                <label class="form-check-label" for="{{ choice.id_for_label }}">{{ choice.choice_label }}</label>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg quiz-submit-btn">Submit Test</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

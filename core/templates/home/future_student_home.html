@@ -1,0 +1,16 @@
+{% extends "shared/layout.html" %}
+{% load i18n %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">{% trans "Welcome, Future Students!" %}</h1>
+    <p class="lead text-center">{% trans "We are excited to have you here! Start exploring the tech industry and find the best career path for you." %}</p>
+
+    <div class="alert alert-black text-center">
+        <h4>🌟 {% trans "Your Future Starts Here!" %}</h4>
+        <p>{% trans "Explore study resources, certifications, and mentorship to kickstart your tech career." %}</p>
+        <a href="{% url 'register' %}" class="btn btn-primary">{% trans "Start Learning" %}</a>
+    </div>
+</div>
+
+{% include "home/index_content.html" %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "shared/layout.html" %}
+{% load i18n %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">{% trans "Hello, Current Students!" %}</h1>
+    <p class="lead text-center">{% trans "Continue your journey towards mastering tech skills with our interactive learning tools and AI assistant." %}</p>
+
+    <div class="alert alert-black text-center">
+        <h4>📚 {% trans "Study With Your AI Tutor" %}</h4>
+        <p>{% trans "Access exclusive study materials and challenge yourself with adaptive quizzes." %}</p>
+    </div>
+</div>
+
+{% include "home/index_content.html" %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "shared/layout.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">{{ title }}</h1>
+
+    <div class="study-description-box">
+        <p>{{ description }}</p>
+    </div>
+
+    {% if skills %}
+    <div class="skills-section mt-4">
+        <h4>{% trans "Skills You Will Learn" %}</h4>
+        <p>{{ skills }}</p>
+    </div>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="{{ resource_url }}" target="_blank" class="btn-resource-red">
+            <i class="fas fa-external-link-alt"></i> {% trans "Open Resource" %}
+        </a>
+    </div>
+
+    {% if request.user.is_authenticated and request.user.student_type == "Current" %}
+        {% include "shared/_study_helper_bot.html" %}
+    {% endif %}
+</div>
+{% endblock %}

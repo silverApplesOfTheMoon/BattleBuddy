@@ -1,0 +1,519 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-10 01:09+0300\n"
+"PO-Revision-Date: 2025-03-10 02:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish <es@example.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: settings.py:118
+msgid "English"
+msgstr "Inglés"
+
+#: settings.py:119
+msgid "Spanish"
+msgstr "Español"
+
+#: templates/home/index.html templates/home/index_content.html templates/shared/layout.html templates/account/login.html templates/account/register.html
+msgid "Start Your Tech Journey Today"
+msgstr "Comienza tu viaje tecnológico hoy"
+
+msgid "Track Your Progress"
+msgstr "Sigue tu progreso"
+
+msgid "Welcome to Washington Vets 2 Tech, your dedicated pathway to a career in technology."
+msgstr "Bienvenido a Washington Vets 2 Tech, tu camino dedicado hacia una carrera en tecnología."
+
+msgid "Whether you’re a veteran, a military spouse, or a tech enthusiast, we provide structured entrance exams, interactive learning modules, and study materials to help you succeed."
+msgstr "Ya seas un veterano, un cónyuge militar o un entusiasta de la tecnología, ofrecemos exámenes de ingreso estructurados, módulos de aprendizaje interactivos y materiales de estudio para ayudarte a tener éxito."
+
+msgid "Learn cloud computing, cybersecurity, and software development."
+msgstr "Aprende computación en la nube, ciberseguridad y desarrollo de software."
+
+msgid "Get hands-on training with industry-leading tools."
+msgstr "Recibe formación práctica con herramientas líderes en la industria."
+
+msgid "Prepare for real-world certification exams."
+msgstr "Prepárate para exámenes de certificación del mundo real."
+
+msgid "Get Started"
+msgstr "Comenzar"
+
+msgid "Choose Your Cohort"
+msgstr "Elige tu cohorte"
+
+msgid "Server & Cloud Applications"
+msgstr "Aplicaciones de Servidor y Nube"
+
+msgid "Type of Work:"
+msgstr "Tipo de Trabajo:"
+
+msgid "Managing virtual machines, configuring cloud services, and ensuring systems remain efficient and scalable."
+msgstr "Administración de máquinas virtuales, configuración de servicios en la nube y garantía de que los sistemas sean eficientes y escalables."
+
+msgid "Ideal Candidate:"
+msgstr "Candidato Ideal:"
+
+msgid "Organized, detail-oriented individuals comfortable working behind the scenes to maintain infrastructure reliability."
+msgstr "Individuos organizados y orientados a los detalles que se sientan cómodos trabajando detrás de escena para mantener la confiabilidad de la infraestructura."
+
+msgid "Explore"
+msgstr "Explorar"
+
+msgid "Cloud Application Development"
+msgstr "Desarrollo de Aplicaciones en la Nube"
+
+msgid "Designing and coding applications that run on AWS, Azure, GCP, or other cloud platforms. Focus on front-end, back-end, or full-stack development."
+msgstr "Diseño y codificación de aplicaciones que se ejecutan en AWS, Azure, GCP u otras plataformas en la nube. Enfoque en desarrollo front-end, back-end o full-stack."
+
+msgid "Creative problem-solvers who enjoy writing code and building modern software solutions that leverage the power of the cloud."
+msgstr "Personas creativas y resolutivas que disfrutan escribiendo código y creando soluciones de software modernas que aprovechan el poder de la nube."
+
+msgid "Cybersecurity Administration"
+msgstr "Administración de Ciberseguridad"
+
+msgid "Protecting networks, systems, and data from cyber threats and vulnerabilities."
+msgstr "Protección de redes, sistemas y datos contra amenazas cibernéticas y vulnerabilidades."
+
+msgid "Analytical thinkers who thrive under pressure and enjoy safeguarding critical infrastructure against hackers."
+msgstr "Pensadores analíticos que prosperan bajo presión y disfrutan protegiendo infraestructuras críticas contra hackers."
+
+msgid "Take the Cohort Quiz"
+msgstr "Realizar el cuestionario de cohortes"
+
+msgid "Washington Vets2Tech"
+msgstr "Washington Vets2Tech"
+
+msgid "Skip to main content"
+msgstr "Saltar al contenido principal"
+
+msgid "Go to Home Page"
+msgstr "Ir a la página principal"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Español"
+msgstr "Español"
+
+msgid "Main Navigation"
+msgstr "Navegación principal"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "Manage Users"
+msgstr "Administrar usuarios"
+
+msgid "About Us"
+msgstr "Sobre nosotros"
+
+msgid "FAQ"
+msgstr "Preguntas frecuentes"
+
+msgid "Login"
+msgstr "Iniciar sesión"
+
+msgid "Register"
+msgstr "Registrarse"
+
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+msgid "Go to Saint Martin's University"
+msgstr "Ir a la Universidad de Saint Martin"
+
+msgid "Saint Martin's University"
+msgstr "Universidad de Saint Martin"
+
+msgid "Privacy"
+msgstr "Privacidad"
+
+msgid "Welcome Back!"
+msgstr "¡Bienvenido de nuevo!"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Email Address"
+msgstr "Dirección de correo electrónico"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Forgot Password?"
+msgstr "¿Olvidaste tu contraseña?"
+
+msgid "Don’t have an account yet?"
+msgstr "¿Aún no tienes una cuenta?"
+
+msgid "Sign Up"
+msgstr "Regístrate"
+
+msgid "Create an Account"
+msgstr "Crea una cuenta"
+
+msgid "Full Name"
+msgstr "Nombre completo"
+
+msgid "Confirm Password"
+msgstr "Confirmar contraseña"
+
+msgid "Student Type"
+msgstr "Tipo de estudiante"
+
+msgid "Future Student"
+msgstr "Estudiante futuro"
+
+msgid "Current Student"
+msgstr "Estudiante actual"
+
+msgid "Alumni Student"
+msgstr "Estudiante graduado"
+
+msgid "Neither"
+msgstr "Ninguno"
+
+msgid "Agree to User Terms and Conditions"
+msgstr "Aceptar los términos y condiciones del usuario"
+
+msgid "Already have an account?"
+msgstr "¿Ya tienes una cuenta?"
+
+msgid "Which Cohort Is Right For You?"
+msgstr "¿Qué cohorte es adecuada para ti?"
+
+msgid "Submit Quiz"
+msgstr "Enviar cuestionario"
+
+msgid "1. How do you prefer to work?"
+msgstr "1. ¿Cómo prefieres trabajar?"
+
+msgid "I love designing and coding innovative applications."
+msgstr "Me encanta diseñar y programar aplicaciones innovadoras."
+
+msgid "I enjoy configuring and managing IT infrastructure."
+msgstr "Disfruto configurando y gestionando la infraestructura de TI."
+
+msgid "I like protecting systems and networks from threats."
+msgstr "Me gusta proteger sistemas y redes de amenazas."
+
+msgid "2. What aspect of technology excites you the most?"
+msgstr "2. ¿Qué aspecto de la tecnología te emociona más?"
+
+msgid "Building user-friendly web applications and software."
+msgstr "Construyendo aplicaciones web y software fáciles de usar."
+
+msgid "Optimizing system performance and scalability."
+msgstr "Optimizando el rendimiento y la escalabilidad del sistema."
+
+msgid "Investigating vulnerabilities and safeguarding data."
+msgstr "Investigando vulnerabilidades y protegiendo datos."
+
+msgid "3. What type of projects inspire you?"
+msgstr "3. ¿Qué tipo de proyectos te inspiran?"
+
+msgid "Developing full-stack applications and interactive interfaces."
+msgstr "Desarrollando aplicaciones full-stack e interfaces interactivas."
+
+msgid "Deploying, monitoring, and managing cloud infrastructure."
+msgstr "Desplegando, monitoreando y gestionando infraestructura en la nube."
+
+msgid "Conducting penetration tests and implementing security measures."
+msgstr "Realizando pruebas de penetración e implementando medidas de seguridad."
+
+msgid "4. How do you approach problem-solving?"
+msgstr "4. ¿Cómo abordas la resolución de problemas?"
+
+msgid "I enjoy creatively coding and prototyping solutions."
+msgstr "Disfruto programando creativamente y creando prototipos de soluciones."
+
+msgid "I systematically troubleshoot and optimize systems."
+msgstr "Soluciono problemas y optimizo sistemas de manera sistemática."
+
+msgid "I analyze risks and design defensive strategies."
+msgstr "Analizo riesgos y diseño estrategias defensivas."
+
+msgid "5. What work environment appeals most to you?"
+msgstr "5. ¿Qué entorno de trabajo te atrae más?"
+
+msgid "A creative, collaborative team developing new software."
+msgstr "Un equipo creativo y colaborativo desarrollando nuevo software."
+
+msgid "A dynamic IT department handling complex infrastructure challenges."
+msgstr "Un departamento de TI dinámico manejando desafíos complejos de infraestructura."
+
+msgid "A security operations center where threats are monitored and mitigated."
+msgstr "Un centro de operaciones de seguridad donde se monitorean y mitigan amenazas."
+
+msgid "6. How do you prefer to learn?"
+msgstr "6. ¿Cómo prefieres aprender?"
+
+msgid "Through hands-on coding projects and interactive tutorials."
+msgstr "A través de proyectos de codificación prácticos y tutoriales interactivos."
+
+msgid "By tackling real-world system and network challenges."
+msgstr "Abordando desafíos reales de sistemas y redes."
+
+msgid "Using simulated security scenarios and case studies."
+msgstr "Utilizando escenarios de seguridad simulados y estudios de caso."
+
+msgid "Need help?"
+msgstr "¿Necesitas ayuda?"
+
+msgid "Click on me!"
+msgstr "¡Haz clic en mí!"
+
+msgid "Study Helper Chat"
+msgstr "Chat de ayuda para estudiar"
+
+msgid "Hello! How can I help you today?"
+msgstr "¡Hola! ¿Cómo puedo ayudarte hoy?"
+
+msgid "Send"
+msgstr "Enviar"
+
+msgid "Type your question..."
+msgstr "Escribe tu pregunta..."
+
+msgid "Skills You Will Learn"
+msgstr "Habilidades que aprenderás"
+
+msgid "Open Resource"
+msgstr "Abrir recurso"
+
+# Cloud Development Bootcamp
+msgid "Cloud Development Bootcamp"
+msgstr "Bootcamp de Desarrollo en la Nube"
+
+msgid "This immersive bootcamp offers a step-by-step guide to building cloud-native applications. Learn key concepts like microservices architecture, containerization, and continuous deployment, using modern tools such as Docker and Kubernetes."
+msgstr "Este bootcamp inmersivo ofrece una guía paso a paso para construir aplicaciones nativas en la nube. Aprende conceptos clave como arquitectura de microservicios, contenedorización y despliegue continuo, utilizando herramientas modernas como Docker y Kubernetes."
+
+msgid "Microservices, Docker, Kubernetes, DevOps pipelines"
+msgstr "Microservicios, Docker, Kubernetes, Canalizaciones de DevOps"
+
+# Developing on AWS
+msgid "Developing on AWS"
+msgstr "Desarrollando en AWS"
+
+msgid "This resource provides an in-depth introduction to designing, building, and deploying applications on Amazon Web Services (AWS). Learn essential AWS services like Lambda, DynamoDB, and API Gateway."
+msgstr "Este recurso ofrece una introducción detallada al diseño, desarrollo y despliegue de aplicaciones en Amazon Web Services (AWS). Aprende servicios esenciales de AWS como Lambda, DynamoDB y API Gateway."
+
+msgid "AWS Lambda, DynamoDB, API Gateway, Serverless architectures"
+msgstr "AWS Lambda, DynamoDB, API Gateway, Arquitecturas sin servidor"
+
+# Microsoft Learn: App Development
+msgid "Microsoft Learn: App Development"
+msgstr "Microsoft Learn: Desarrollo de Aplicaciones"
+
+msgid "Explore the world of cloud application development with Microsoft's free interactive learning platform. This course covers Azure App Services, Azure Functions, and CI/CD pipelines."
+msgstr "Explora el mundo del desarrollo de aplicaciones en la nube con la plataforma de aprendizaje interactiva gratuita de Microsoft. Este curso cubre Azure App Services, Azure Functions y canalizaciones CI/CD."
+
+msgid "Azure App Services, Azure Functions, CI/CD, Cloud scaling"
+msgstr "Azure App Services, Azure Functions, CI/CD, Escalado en la nube"
+
+# Full-Stack Cloud Development
+msgid "Full-Stack Cloud Development"
+msgstr "Desarrollo en la Nube Full-Stack"
+
+msgid "This specialization, offered by IBM on Coursera, teaches you how to develop full-stack cloud-based applications, covering front-end frameworks, server-side scripting, and database integration."
+msgstr "Esta especialización, ofrecida por IBM en Coursera, te enseña a desarrollar aplicaciones en la nube Full-Stack, cubriendo frameworks de front-end, scripting del lado del servidor e integración de bases de datos."
+
+msgid "Front-end frameworks, Server-side scripting, Database integration, Continuous delivery"
+msgstr "Frameworks de front-end, Scripting del lado del servidor, Integración de bases de datos, Entrega continua"
+
+# Google Cloud Application Development
+msgid "Google Cloud Application Development"
+msgstr "Desarrollo de Aplicaciones en Google Cloud"
+
+msgid "Google Cloud's comprehensive learning platform offers tutorials, labs, and certifications to help you master cloud app development, including scalable backend systems and serverless functions."
+msgstr "La plataforma de aprendizaje integral de Google Cloud ofrece tutoriales, laboratorios y certificaciones para ayudarte a dominar el desarrollo de aplicaciones en la nube, incluyendo sistemas backend escalables y funciones sin servidor."
+
+msgid "Google Cloud, Serverless functions, App Engine, Cloud SQL"
+msgstr "Google Cloud, Funciones sin servidor, App Engine, Cloud SQL"
+
+# IBM Application Development
+msgid "IBM Application Development"
+msgstr "Desarrollo de Aplicaciones IBM"
+
+msgid "Dive into IBM's developer portal to learn about creating cloud-native applications using IBM Cloud services, including Watson AI and Kubernetes."
+msgstr "Sumérgete en el portal de desarrolladores de IBM para aprender sobre la creación de aplicaciones nativas en la nube utilizando servicios de IBM Cloud, incluyendo Watson AI y Kubernetes."
+
+msgid "IBM Cloud, Watson AI, Kubernetes, Advanced cloud development"
+msgstr "IBM Cloud, Watson AI, Kubernetes, Desarrollo avanzado en la nube"
+
+# CompTIA Security+
+msgid "CompTIA Security+"
+msgstr "CompTIA Security+"
+
+msgid "CompTIA Security+ is an industry-recognized certification designed for entry-level professionals. This resource covers risk management, network security, and compliance."
+msgstr "CompTIA Security+ es una certificación reconocida en la industria, diseñada para profesionales de nivel inicial. Este recurso cubre la gestión de riesgos, la seguridad de redes y el cumplimiento normativo."
+
+msgid "Network security, Risk management, Compliance, Threat prevention"
+msgstr "Seguridad de redes, Gestión de riesgos, Cumplimiento normativo, Prevención de amenazas"
+
+# Introduction to Cybersecurity
+msgid "Introduction to Cybersecurity"
+msgstr "Introducción a la Ciberseguridad"
+
+msgid "Offered by Cisco Networking Academy, this beginner-friendly course introduces the core concepts of cybersecurity, including types of attacks, threat detection, and data protection strategies."
+msgstr "Ofrecido por Cisco Networking Academy, este curso para principiantes introduce los conceptos clave de la ciberseguridad, incluyendo tipos de ataques, detección de amenazas y estrategias de protección de datos."
+
+msgid "Threat detection, Data protection, Basic cyber attacks, Cisco tools"
+msgstr "Detección de amenazas, Protección de datos, Ataques cibernéticos básicos, Herramientas de Cisco"
+
+# Certified Ethical Hacker
+msgid "Certified Ethical Hacker"
+msgstr "Hacker Ético Certificado"
+
+msgid "The CEH certification from EC-Council is a globally respected credential that teaches ethical hacking techniques and methodologies to identify vulnerabilities and strengthen systems against cyberattacks."
+msgstr "La certificación CEH del EC-Council es una credencial reconocida a nivel mundial que enseña técnicas y metodologías de hacking ético para identificar vulnerabilidades y fortalecer los sistemas contra ataques cibernéticos."
+
+msgid "Penetration testing, Vulnerability analysis, Network scanning, Ethical hacking"
+msgstr "Pruebas de penetración, Análisis de vulnerabilidades, Escaneo de redes, Hacking ético"
+
+# Google Cybersecurity Training
+msgid "Google Cybersecurity Training"
+msgstr "Formación en Ciberseguridad de Google"
+
+msgid "This free training program from Google offers hands-on exercises and certification preparation for those interested in practical cybersecurity applications."
+msgstr "Este programa de formación gratuita de Google ofrece ejercicios prácticos y preparación para certificaciones para aquellos interesados en aplicaciones prácticas de ciberseguridad."
+
+msgid "Google security tools, System hardening, Network fundamentals, Cyber labs"
+msgstr "Herramientas de seguridad de Google, Fortalecimiento del sistema, Fundamentos de redes, Laboratorios de ciberseguridad"
+
+# Stanford Advanced Cybersecurity
+msgid "Stanford Advanced Cybersecurity"
+msgstr "Ciberseguridad Avanzada de Stanford"
+
+msgid "Offered by Stanford University, this advanced program explores cutting-edge practices in threat analysis, risk assessment, and data protection."
+msgstr "Ofrecido por la Universidad de Stanford, este programa avanzado explora prácticas innovadoras en análisis de amenazas, evaluación de riesgos y protección de datos."
+
+msgid "Threat analysis, Risk assessment, Data protection, Advanced attack vectors"
+msgstr "Análisis de amenazas, Evaluación de riesgos, Protección de datos, Vectores de ataque avanzados"
+
+# IBM Cybersecurity Analyst
+msgid "IBM Cybersecurity Analyst"
+msgstr "Analista de Ciberseguridad de IBM"
+
+msgid "This professional certificate on Coursera provides in-depth knowledge of security intelligence, event management, incident response, and risk analysis."
+msgstr "Este certificado profesional en Coursera proporciona conocimientos profundos sobre inteligencia de seguridad, gestión de eventos, respuesta a incidentes y análisis de riesgos."
+
+msgid "SIEM systems, Incident response, Security analytics, IBM security tools"
+msgstr "Sistemas SIEM, Respuesta a incidentes, Análisis de seguridad, Herramientas de seguridad de IBM"
+
+# AWS Certified Solutions Architect
+msgid "AWS Certified Solutions Architect"
+msgstr "Arquitecto de Soluciones Certificado por AWS"
+
+msgid "This highly regarded certification by AWS equips you with the knowledge and skills to design, deploy, and operate highly available, cost-effective, and secure applications on AWS."
+msgstr "Esta certificación altamente reconocida de AWS te proporciona los conocimientos y habilidades para diseñar, implementar y operar aplicaciones altamente disponibles, rentables y seguras en AWS."
+
+msgid "AWS architecture, High availability, Cost optimization, Security best practices"
+msgstr "Arquitectura de AWS, Alta disponibilidad, Optimización de costos, Mejores prácticas de seguridad"
+
+# Microsoft Azure Fundamentals
+msgid "Microsoft Azure Fundamentals"
+msgstr "Fundamentos de Microsoft Azure"
+
+msgid "Ideal for beginners, this certification offers a thorough introduction to Microsoft Azure services, covering cloud concepts, core Azure services, pricing, and security fundamentals."
+msgstr "Ideal para principiantes, esta certificación ofrece una introducción completa a los servicios de Microsoft Azure, abarcando conceptos de la nube, servicios principales de Azure, precios y fundamentos de seguridad."
+
+msgid "Azure basics, Cloud concepts, Azure security, Cost management"
+msgstr "Conceptos básicos de Azure, Conceptos de la nube, Seguridad en Azure, Gestión de costos"
+
+# Introduction to Kubernetes
+msgid "Introduction to Kubernetes"
+msgstr "Introducción a Kubernetes"
+
+msgid "This resource from Kubernetes.io introduces you to container orchestration, helping you manage and deploy containers across clusters effectively."
+msgstr "Este recurso de Kubernetes.io te introduce a la orquestación de contenedores, ayudándote a administrar e implementar contenedores en clústeres de manera efectiva."
+
+msgid "Container orchestration, Clusters, Pods & services, Deployment best practices"
+msgstr "Orquestación de contenedores, Clústeres, Pods y servicios, Mejores prácticas de implementación"
+
+# Google Cloud Fundamentals
+msgid "Google Cloud Fundamentals"
+msgstr "Fundamentos de Google Cloud"
+
+msgid "Learn the basics of Google Cloud Platform through interactive lessons and hands-on labs, covering cloud computing fundamentals, managing virtual machines, and leveraging Google Cloud's unique features."
+msgstr "Aprende los fundamentos de Google Cloud Platform a través de lecciones interactivas y laboratorios prácticos, cubriendo los fundamentos de la computación en la nube, la gestión de máquinas virtuales y las características únicas de Google Cloud."
+
+msgid "Compute Engine, VM management, GCP fundamentals, Scalability"
+msgstr "Compute Engine, Gestión de máquinas virtuales, Fundamentos de GCP, Escalabilidad"
+
+# IBM Cloud Learn Hub
+msgid "IBM Cloud Learn Hub"
+msgstr "Centro de Aprendizaje de IBM Cloud"
+
+msgid "The IBM Cloud Learn Hub offers resources on app modernization, AI integration, Kubernetes, and hybrid cloud setups."
+msgstr "El Centro de Aprendizaje de IBM Cloud ofrece recursos sobre modernización de aplicaciones, integración de IA, Kubernetes y configuraciones de nube híbrida."
+
+msgid "IBM Cloud, App modernization, Hybrid cloud, AI integration"
+msgstr "IBM Cloud, Modernización de aplicaciones, Nube híbrida, Integración de IA"
+
+# Cloud Academy
+msgid "Cloud Academy"
+msgstr "Academia de la Nube"
+
+msgid "Cloud Academy offers interactive quizzes, hands-on labs, and comprehensive courses to help you become a cloud expert across AWS, Azure, Google Cloud, and Kubernetes."
+msgstr "Cloud Academy ofrece cuestionarios interactivos, laboratorios prácticos y cursos completos para ayudarte a convertirte en un experto en la nube con AWS, Azure, Google Cloud y Kubernetes."
+
+msgid "AWS, Azure, Google Cloud, Kubernetes, Continuous learning"
+msgstr "AWS, Azure, Google Cloud, Kubernetes, Aprendizaje continuo"
+
+# current_student_home.html
+msgid "Hello, Current Students!"
+msgstr "¡Hola, Estudiantes Actuales!"
+
+msgid "Continue your journey towards mastering tech skills with our interactive learning tools and AI assistant."
+msgstr "Continúa tu viaje hacia el dominio de habilidades tecnológicas con nuestras herramientas de aprendizaje interactivas y asistente de IA."
+
+msgid "Study With Your AI Tutor"
+msgstr "Estudia con tu Tutor de IA"
+
+msgid "Access exclusive study materials and challenge yourself with adaptive quizzes."
+msgstr "Accede a materiales de estudio exclusivos y desafíate con cuestionarios adaptativos."
+
+# future_student_home.html
+msgid "Welcome, Future Students!"
+msgstr "¡Bienvenidos, Futuros Estudiantes!"
+
+msgid "We are excited to have you here! Start exploring the tech industry and find the best career path for you."
+msgstr "¡Estamos emocionados de tenerte aquí! Comienza a explorar la industria tecnológica y encuentra el mejor camino profesional para ti."
+
+msgid "Your Future Starts Here!"
+msgstr "¡Tu Futuro Comienza Aquí!"
+
+msgid "Explore study resources, certifications, and mentorship to kickstart your tech career."
+msgstr "Explora recursos de estudio, certificaciones y mentoría para impulsar tu carrera en tecnología."
+
+msgid "Start Learning"
+msgstr "Comienza a Aprender"
+
+# alumni_home.html
+msgid "Welcome Back, Alumni!"
+msgstr "¡Bienvenido de Nuevo, Exalumno!"
+
+msgid "Keep learning, stay connected, and explore new opportunities in the tech world."
+msgstr "Sigue aprendiendo, mantente conectado y explora nuevas oportunidades en el mundo tecnológico."
+
+msgid "Stay Ahead in Your Career!"
+msgstr "¡Mantente a la Vanguardia en tu Carrera!"
+
+msgid "Access job resources, networking events, and continued learning opportunities."
+msgstr "Accede a recursos laborales, eventos de networking y oportunidades de aprendizaje continuo."
+
+msgid "Join Alumni Network"
+msgstr "Únete a la Red de Exalumnos"
