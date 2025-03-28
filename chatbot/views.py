@@ -1,8 +1,7 @@
 from django.shortcuts import render
 
-# Home view for the root URL
 def home_view(request):
-    return render(request, 'chatbot/home.html')
+    return render(request, 'chatbot/home.html')  # Ensure 'chatbot/home.html' exists
 
 # Other views...
 def chatbot_view(request):

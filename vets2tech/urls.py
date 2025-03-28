@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+print("🚀 vets2tech/urls.py loaded!")  # Debugging
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('chatbot.urls')),  # Include the chatbot app's URLs
+    path('', include('chatbot.urls')),  # Ensure this is included
 ]
 
-print("vets2tech/urls.py loaded successfully!")
+print("✅ vets2tech/urls.py successfully included chatbot.urls!")  # Debugging
