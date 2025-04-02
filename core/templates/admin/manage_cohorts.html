@@ -1,0 +1,48 @@
+<!-- This file extends the shared layout and loads the internationalization library -->
+{% extends "shared/layout.html" %}
+{% load i18n %}
+{% block content %}
+<!-- Main container for Manage Cohorts page -->
+<div class="container mt-5">
+    <!-- Page Heading -->
+    <h2>Manage Cohorts</h2>
+    <!-- Table for displaying cohorts and their statuses -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Cohort</th>
+                <th>Status</th>
+                <th>Toggle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through each cohort -->
+            {% for cohort in cohorts %}
+            <tr>
+                <!-- Display cohort name -->
+                <td>{{ cohort.name }}</td>
+                <!-- Display cohort status -->
+                <td>
+                    {% if cohort.enabled %}
+                        <span class="text-success">Enabled</span>
+                    {% else %}
+                        <span class="text-danger">Disabled</span>
+                    {% endif %}
+                </td>
+                <!-- Form to toggle cohort status -->
+                <td>
+                    <form method="POST">
+                        {% csrf_token %} <!-- CSRF token for security -->
+                        <input type="hidden" name="cohort_id" value="{{ cohort.id }}">
+                        <!-- Button changes style and text based on cohort status -->
+                        <button class="btn btn-sm {% if cohort.enabled %}btn-danger{% else %}btn-success{% endif %}">
+                            {% if cohort.enabled %}Disable{% else %}Enable{% endif %}
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

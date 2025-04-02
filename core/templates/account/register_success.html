@@ -1,0 +1,13 @@
+<!-- Extend base layout -->
+{% extends "shared/layout.html" %}
+
+{% block content %}
+<div class="container mt-5"> <!-- Bootstrap container -->
+    <h2>Registration Successful!</h2> <!-- Message -->
+    <p>Your account has been created. You are already signed in.</p>
+    <p>
+        <!-- Link to home page -->
+        <a href="{% url 'home' %}" class="btn btn-primary">Go to Home Page</a>
+    </p>
+</div>
+{% endblock %}

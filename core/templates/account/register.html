@@ -1,0 +1,105 @@
+<!-- Extend shared layout -->
+{% extends "shared/layout.html" %}
+{% load i18n %} {# Load translation tags #}
+
+{% block content %}
+<div class="row m-0" style="min-height: 90vh;"> <!-- Full height row -->
+
+    <!-- Left-side image -->
+    <div class="col-md-6 d-none d-md-block p-0">
+        <div class="h-100 w-100" 
+             style="background: url('/static/images/register.jpg') no-repeat center center; 
+                    background-size: cover;">
+        </div>
+    </div>
+
+    <!-- Right-side form -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center bg-v2t-red">
+        <div class="p-3" style="max-width: 320px; width: 100%; background: #fff; border-radius: 8px; padding-bottom: 1rem;">
+            <h2 class="text-center mb-3" style="color: #000">{% trans "Create an Account" %}</h2>
+
+            <!-- Display form errors -->
+            {% if messages %}
+              <div class="alert alert-danger">
+                {% for message in messages %}
+                  <p>{{ message }}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            <!-- Registration form -->
+            <form method="post">
+                {% csrf_token %} <!-- CSRF token -->
+
+                <!-- Full Name input -->
+                <div class="mb-2">
+                    <label for="full_name" class="form-label fw-bold">{% trans "Full Name" %}</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" name="full_name" class="form-control" placeholder="{% trans 'Full Name' %}" required>
+                    </div>
+                </div>
+
+                <!-- Email input -->
+                <div class="mb-2">
+                    <label for="email" class="form-label fw-bold">{% trans "Email" %}</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        <input type="email" name="email" class="form-control" placeholder="{% trans 'Email Address' %}" required>
+                    </div>
+                </div>
+
+                <!-- Password input -->
+                <div class="mb-2">
+                    <label for="password1" class="form-label fw-bold">{% trans "Password" %}</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" name="password1" class="form-control" placeholder="{% trans 'Password' %}" required>
+                    </div>
+                </div>
+
+                <!-- Confirm password -->
+                <div class="mb-2">
+                    <label for="password2" class="form-label fw-bold">{% trans "Confirm Password" %}</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" name="password2" class="form-control" placeholder="{% trans 'Confirm Password' %}" required>
+                    </div>
+                </div>
+
+                <!-- Student type dropdown -->
+                <div class="mb-2">
+                    <label for="student_type" class="form-label fw-bold">{% trans "Student Type" %}</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user-graduate"></i></span>
+                        <select name="student_type" class="form-control">
+                            <option value="">{% trans "-- Select --" %}</option>
+                            <option value="Future">{% trans "Future Student" %}</option>
+                            <option value="Current">{% trans "Current Student" %}</option>
+                            <option value="Alumni">{% trans "Alumni Student" %}</option>
+                            <option value="None">{% trans "Neither" %}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Terms checkbox -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="termsCheckbox" required>
+                    <label for="termsCheckbox" class="form-check-label" style="font-size: 0.85rem; color: var(--v2t-dark-gray);">
+                        {% trans "Agree to User Terms and Conditions" %}
+                    </label>
+                </div>
+
+                <!-- Register button -->
+                <button type="submit" class="btn btn-primary w-100">{% trans "Register" %}</button>
+
+                <!-- Link to login -->
+                <p class="mt-2 text-center">
+                    {% trans "Already have an account?" %}
+                    <a href="{% url 'login' %}" class="text-decoration-underline">{% trans "Login" %}</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

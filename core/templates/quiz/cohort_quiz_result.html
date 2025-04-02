@@ -1,0 +1,20 @@
+<!-- This template extends the shared layout for consistent styling -->
+{% extends "shared/layout.html" %}
+
+{% block content %}
+<!-- Main container for Quiz Results page -->
+<div class="container mt-5">
+    <!-- Page Heading -->
+    <h2 class="text-center mb-4">Quiz Results</h2>
+
+    <!-- Display suggestion result -->
+    <div class="alert alert-info text-center">
+        <p>{{ suggestion }}</p>
+    </div>
+
+    <!-- Link to return to Home page -->
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary">Return to Home</a>
+    </div>
+</div>
+{% endblock %}

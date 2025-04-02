@@ -1,0 +1,134 @@
+<!-- This file loads internationalization for translations and provides the Study Helper Bot widget -->
+{% load i18n %}
+<div id="studybot-container" class="studybot-container" role="region" aria-labelledby="studybot-title">
+  <!-- Robot Circle (Study Helper Bot) -->
+  <div id="studybot-robot" aria-label="Study Helper Robot">
+    <div class="robot-inner">
+      <!-- Study Bot Antenna -->
+      <div class="studybot-antenna">
+        <div class="studybot-antenna-ball"></div>
+      </div>
+      <!-- Study Bot Head with Eyes and Mouth -->
+      <div class="studybot-head">
+        <div class="studybot-eyes">
+          <div class="studybot-eye studybot-eye-left"></div>
+          <div class="studybot-eye studybot-eye-right"></div>
+        </div>
+        <div class="studybot-mouth"></div>
+      </div>
+      <!-- Study Bot Body with Arms and Legs -->
+      <div class="studybot-body">
+        <div class="studybot-chest"></div>
+        <div class="studybot-arm studybot-arm-left">
+          <div class="studybot-hand studybot-hand-left"></div>
+        </div>
+        <div class="studybot-arm studybot-arm-right">
+          <div class="studybot-hand studybot-hand-right"></div>
+        </div>
+        <div class="studybot-leg studybot-leg-left">
+          <div class="studybot-foot studybot-foot-left"></div>
+        </div>
+        <div class="studybot-leg studybot-leg-right">
+          <div class="studybot-foot studybot-foot-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Study Bot Bubble prompting for help -->
+  <div id="studybot-bubble-container">
+    {% trans "Need help?" %} <br> {% trans "Click on me!" %}
+    <div id="studybot-bubble">
+      <div class="speech-tail"></div>
+    </div>
+  </div>
+
+  <!-- The Chat Window for Study Helper Bot -->
+  <div id="studybot-chat" role="dialog" aria-labelledby="chat-title" hidden>
+    <div class="studybot-chat-header">
+      <h5 id="chat-title">{% trans "Study Helper Chat" %}</h5>
+      <button id="studybot-close" class="studybot-close" aria-label="Close chat window">&times;</button>
+    </div>
+    <div class="chat-window" role="log">
+      <p class="chat-message">{% trans "Hello! How can I help you today?" %}</p>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input form-control" placeholder="{% trans 'Type your question...' %}" aria-label="Chat input">
+      <button class="btn chat-send" tabindex="0" role="button" aria-label="Send message">{% trans "Send" %}</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // JavaScript for handling the Study Helper Bot interactions
+
+  // Wait until the DOM is fully loaded before running the script
+  document.addEventListener('DOMContentLoaded', function () {
+    // Get a reference to the study bot's robot element (the clickable element)
+    const robot = document.getElementById("studybot-robot");
+    // Get a reference to the bubble element which prompts the user for help
+    const bubble = document.getElementById("studybot-bubble");
+    // Get a reference to the container that holds the bubble element
+    const bubbleContainer = document.getElementById("studybot-bubble-container");
+    // Get a reference to the chat window element that contains the conversation UI
+    const chatWindow = document.getElementById("studybot-chat");
+    // Get a reference to the close button inside the chat window
+    const closeButton = document.getElementById("studybot-close");
+
+    // When the robot element is clicked, open the chat window
+    robot.addEventListener("click", function () {
+      // Make the chat window visible by removing the 'hidden' property and setting display style to 'block'
+      chatWindow.hidden = false;
+      chatWindow.style.display = "block";
+
+      // Remove any closing animation class and add an opening animation class
+      chatWindow.classList.remove("closing");
+      chatWindow.classList.add("opening");
+
+      // Hide the help bubble and its container as the chat is now open
+      bubble.style.display = "none";
+      bubbleContainer.style.display = "none";
+    });
+
+    // When the close button in the chat window is clicked, close the chat window
+    closeButton.addEventListener("click", function () {
+      // Begin the closing animation by removing the 'opening' class and adding a 'closing' class
+      chatWindow.classList.remove("opening");
+      chatWindow.classList.add("closing");
+
+      // Wait for 350 milliseconds to allow the closing animation to complete
+      setTimeout(() => {
+        // Hide the chat window by setting the hidden property and display style to 'none'
+        chatWindow.hidden = true;
+        chatWindow.style.display = "none";
+        // Remove the closing animation class to reset the state for future interactions
+        chatWindow.classList.remove("closing");
+
+        // Show the help bubble and its container so the user can reopen the chat if needed
+        bubble.style.display = "block";
+        bubbleContainer.style.display = "block";
+      }, 350);
+    });
+
+    // Listen for keyboard events to allow closing the chat with the ESC key
+    document.addEventListener("keydown", function (e) {
+      // Check if the pressed key is "Escape" and if the chat window is currently visible
+      if (e.key === "Escape" && !chatWindow.hidden) {
+        // Begin the closing animation as done when the close button is clicked
+        chatWindow.classList.remove("opening");
+        chatWindow.classList.add("closing");
+
+        // After a delay to allow the animation to finish, hide the chat window
+        setTimeout(() => {
+          chatWindow.hidden = true;
+          chatWindow.style.display = "none";
+          chatWindow.classList.remove("closing");
+
+          // Restore the visibility of the help bubble and its container
+          bubble.style.display = "block";
+          bubbleContainer.style.display = "block";
+        }, 350);
+      }
+    });
+  });
+</script>

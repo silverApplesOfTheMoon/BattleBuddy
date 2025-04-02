@@ -1,0 +1,22 @@
+<!-- Extends the shared layout template -->
+{% extends "shared/layout.html" %}
+{% load i18n %}
+{% block content %}
+<!-- Main container for Current Student Home Page content -->
+<div class="container mt-4">
+    <!-- Greeting Header for Current Students -->
+    <h1 class="text-center mb-4">{% trans "Hello, Current Students!" %}</h1>
+    <!-- Introductory Paragraph -->
+    <p class="lead text-center">{% trans "Continue your journey towards mastering tech skills with our interactive learning tools and AI assistant." %}</p>
+
+    <!-- Alert Section for Study With Your AI Tutor -->
+    <div class="alert alert-black text-center">
+        <h4>📚 {% trans "Study With Your AI Tutor" %}</h4>
+        <p>{% trans "Access exclusive study materials and challenge yourself with adaptive quizzes." %}</p>
+    </div>
+    <!-- End of Alert Section -->
+</div>
+
+<!-- Include additional home page content -->
+{% include "home/index_content.html" %}
+{% endblock %}

@@ -1,0 +1,50 @@
+<!-- This template extends the shared layout and loads internationalization for translations -->
+{% extends "shared/layout.html" %}
+{% load i18n %}
+
+{% block content %}
+<!-- Main container for the Cohort Quiz page -->
+<div class="container mt-5 quiz-container">
+    <!-- Quiz Title -->
+    <h2 class="text-center mb-4 quiz-title">{% trans "Which Cohort Is Right For You?" %}</h2>
+
+    <!-- Quiz Form -->
+    <form method="post">
+        {% csrf_token %} <!-- CSRF token for security -->
+
+        <!-- Display any non-field errors -->
+        <div class="text-danger">{{ form.non_field_errors }}</div>
+
+        <!-- Loop through each quiz question field -->
+        {% for field in form %}
+        <div class="mb-4 quiz-question">
+            <!-- Display question label -->
+            <p class="quiz-question-text"><strong>{{ field.label }}</strong></p>
+            
+            <!-- Loop through each choice for the question -->
+            {% for choice in field %}
+            <div class="form-check">
+                {{ choice.tag }} 
+                <label style="color: white;" class="form-check-label" for="{{ choice.id_for_label }}">
+                    {{ choice.choice_label }}
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <!-- Submit Button for the quiz -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg quiz-submit-btn">{% trans "Submit Quiz" %}</button>
+        </div>
+    </form>
+
+    <!-- Display recommended cohort if suggestion is available -->
+    {% if suggestion %}
+    <div class="quiz-result mt-5 text-center">
+        <h3>{% trans "Your Recommended Cohort:" %}</h3>
+        <p class="quiz-suggestion"><strong>{{ suggestion }}</strong></p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "shared/layout.html" %}
+{% block content %}
+<!-- Main container for Server & Cloud Application Training page -->
+<div class="container mt-5 text-center">
+    <!-- Page Header -->
+    <h1 class="mb-4">Server & Cloud Application Training</h1>
+
+    <!-- Study Materials Section -->
+    <div class="study-materials">
+        <!-- AWS Certified Solutions Architect Card -->
+        <a href="{% url 'study_description' 'AWS Certified Solutions Architect' %}" class="study-card">
+            <i class="fab fa-aws"></i>
+            <div class="study-text">AWS Certified Solutions Architect</div>
+        </a>
+        <!-- Microsoft Azure Fundamentals Card -->
+        <a href="{% url 'study_description' 'Microsoft Azure Fundamentals' %}" class="study-card">
+            <i class="fab fa-microsoft"></i>
+            <div class="study-text">Microsoft Azure Fundamentals</div>
+        </a>
+        <!-- Introduction to Kubernetes Card -->
+        <a href="{% url 'study_description' 'Introduction to Kubernetes' %}" class="study-card">
+            <i class="fas fa-network-wired"></i>
+            <div class="study-text">Introduction to Kubernetes</div>
+        </a>
+        <!-- Google Cloud Fundamentals Card -->
+        <a href="{% url 'study_description' 'Google Cloud Fundamentals' %}" class="study-card">
+            <i class="fab fa-google"></i>
+            <div class="study-text">Google Cloud Fundamentals</div>
+        </a>
+        <!-- IBM Cloud Learn Hub Card -->
+        <a href="{% url 'study_description' 'IBM Cloud Learn Hub' %}" class="study-card">
+            <i class="fab fa-ibm"></i>
+            <div class="study-text">IBM Cloud Learn Hub</div>
+        </a>
+        <!-- Cloud Academy Card -->
+        <a href="{% url 'study_description' 'Cloud Academy' %}" class="study-card">
+            <i class="fas fa-book"></i>
+            <div class="study-text">Cloud Academy</div>
+        </a>
+    </div>
+    <!-- End of Study Materials Section -->
+
+    <!-- Quiz Bot Section -->
+    <div class="quiz-bot-section">
+        <p>Test your cloud knowledge with the Challenge Bot!</p>
+
+        <!-- Red container with the robot and black challenge button -->
+        <div class="challenge-bot-red">
+            <div class="my-html-robot">
+                <!-- Robot Antenna -->
+                <div class="robot-antenna">
+                    <div class="antenna-ball"></div>
+                </div>
+
+                <!-- Robot Helmet and Visor -->
+                <div class="robot-helmet">
+                    <div class="robot-visor">
+                        <!-- Robot Eyes -->
+                        <div class="robot-eye eye-left"></div>
+                        <div class="robot-eye eye-right"></div>
+                    </div>
+                </div>
+
+                <!-- Robot Scarf (neck and tail) -->
+                <div class="robot-scarf">
+                    <div class="scarf-neck"></div>
+                    <div class="scarf-tail"></div>
+                </div>
+
+                <!-- Robot Body with blue chest plate -->
+                <div class="robot-body">
+                    <div class="chest-plate"></div>
+                </div>
+
+                <!-- Robot Left Arm -->
+                <div class="robot-arm arm-left">
+                    <div class="robot-hand hand-left"></div>
+                </div>
+                <!-- Robot Right Arm -->
+                <div class="robot-arm arm-right">
+                    <div class="robot-hand hand-right"></div>
+                </div>
+
+                <!-- Robot Legs with blue feet -->
+                <div class="robot-leg leg-left leg-wiggle">
+                    <div class="robot-foot foot-left"></div>
+                </div>
+                <div class="robot-leg leg-right leg-wiggle">
+                    <div class="robot-foot foot-right"></div>
+                </div>
+            </div>
+            <!-- End of Robot Design -->
+
+            <!-- Black Challenge Button -->
+            <a href="{% url 'challenge_test' cohort='server' %}" class="btn-quiz-black">Take the Challenge</a>
+        </div>
+        <!-- End of Quiz Bot Section -->
+    </div>
+
+    <!-- Conditional inclusion of Study Helper Bot for authenticated current students -->
+    {% if request.user.is_authenticated and request.user.student_type == "Current" %}
+        {% include "shared/_study_helper_bot.html" %}
+    {% endif %}
+</div>
+{% endblock %}

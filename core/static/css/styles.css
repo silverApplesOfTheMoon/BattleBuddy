@@ -1,0 +1,2285 @@
+/* Global styles for html and body */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #27282A;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main element styles */
+main {
+  flex-grow: 1;
+  padding-bottom: 50px;
+}
+
+/* Wrapper container styles */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* Content area styles */
+.content {
+  flex: 1;
+  margin-top: 140px;
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #131416;
+  border-bottom: 2px solid #131416;
+  padding: 20px 0;
+  box-shadow: 0px 4px 8px rgba(28, 29, 30, 0.5);
+}
+
+/* Navbar brand image styles within header */
+header .navbar-brand img {
+  height: 80px;
+}
+
+/* Navigation container styles within header */
+header .nav {
+  background-color: #131416;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+/* Navigation link styles */
+header .nav .nav-link {
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Navigation link hover styles */
+header .nav .nav-link:hover {
+  color: #ff6961;
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* Additional bottom margin for body to accommodate fixed footer */
+body {
+  margin-bottom: 60px;
+}
+
+/* Footer link hover effect */
+footer a:hover {
+  color: #ff4747;
+}
+
+/* Hero text heading styles */
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+  color: #c81e2c;
+}
+
+/* Hero description styles */
+.hero-description {
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Hero list item styles */
+.hero-list li {
+  list-style: none;
+}
+
+/* Progress container styles */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Progress bar container styles */
+.progress {
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Progress bar styles */
+.progress-bar {
+  width: 70%;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* Family image container styles */
+.family-image {
+  border: 4px solid #c81e2c;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Family image element styles */
+.family-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Family image hover scale effect */
+.family-image:hover {
+  transform: scale(1.05);
+}
+
+/* Button styles inside family image */
+.family-image .btn {
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+/* Button hover effect inside family image */
+.family-image .btn:hover {
+  background-color: #a1121f;
+}
+
+/* Card component styles */
+.card {
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Card hover effect styles */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image styling */
+.card img {
+  max-height: 150px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Card heading styles */
+.card h5 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Card paragraph styles */
+.card p {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+/* Override card title color */
+.card .card-title{
+  color: #000;
+}
+
+/* Form text color */
+form{
+  color: #000;
+}
+
+/* Form heading color */
+form h2{
+  color: #000;
+}
+
+/* Primary button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #c81e2c;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+  background-color: #a1121f;
+  transform: scale(1.05);
+}
+
+/* Learn more red button styles */
+.btn-learn-more-red {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: #c81e2c;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Learn more red button hover effect */
+.btn-learn-more-red:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Study materials grid styles */
+.study-materials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  column-gap: 10px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Study card component styles */
+.study-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #c81e2c;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Study card icon styles */
+.study-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Study card text styles */
+.study-card .study-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Study card hover effect */
+.study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styles for study materials on smaller screens */
+@media (max-width: 768px) {
+  .study-materials {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keyframes for float animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Keyframes for wiggle animation */
+@keyframes wiggle {
+  0% { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(5deg) translateY(-5px); }
+}
+
+/* Keyframes for glow animation */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(40, 167, 69, 0.4); }
+  100% { box-shadow: 0 0 20px rgba(40, 167, 69, 0.8); }
+}
+
+/* Additional responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .progress {
+    width: 250px;
+  }
+  .family-image {
+    width: 250px;
+    height: 350px;
+  }
+  .quiz-bot-container {
+    padding: 20px;
+  }
+  .challenge-bot img {
+    width: 120px;
+  }
+  .btn-quiz {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+  .study-materials {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Study description box styles */
+.study-description-box {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-left: 5px solid #28a745;
+  color: #000;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Resource red button styles */
+.btn-resource-red {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #c81e2c;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Resource red button hover effect */
+.btn-resource-red:hover {
+  background: #a1121f;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills section container styles */
+.skills-section {
+  background: #fff;
+  border: 2px solid #c81e2c;
+  border-radius: 8px;
+  padding: 15px;
+  color: #333;
+}
+.skills-section h4 {
+  color: #c81e2c;
+  margin-bottom: 10px;
+}
+
+/* Quiz bot section styles */
+.quiz-bot-section {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #b71c1c;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.quiz-bot-section p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Challenge bot red container styles */
+.challenge-bot-red {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #9b1c1c;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* Black quiz button styles */
+.btn-quiz-black {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #000; 
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Black quiz button hover effect */
+.btn-quiz-black:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* HTML robot container styles */
+.my-html-robot {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  animation: jump 1.5s infinite ease-in-out; 
+}
+
+/* Keyframes for jump animation */
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
+}
+
+/* Robot antenna styles */
+.robot-antenna {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 15px;
+  background: silver;
+  border-radius: 2px;
+}
+.antenna-ball {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: silver;
+  border-radius: 50%;
+}
+
+/* Robot helmet styles */
+.robot-helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 60px;
+  background: silver;
+  border-radius: 50px 50px 40px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot visor styles */
+.robot-visor {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 35px;
+  background: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Robot eye styles */
+.robot-eye {
+  width: 8px;
+  height: 8px;
+  background: #39f;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #39f;
+  animation: blink 2.2s infinite;
+}
+
+/* Keyframes for blink animation */
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  48%, 52% { transform: scaleY(0); }
+}
+
+/* Robot scarf container styles */
+.robot-scarf {
+  position: absolute;
+  top: 45px;
+  z-index: 1;
+  left: 50%;
+  width: 60px;
+  height: 25px;
+  transform: translateX(-50%);
+}
+/* Robot scarf neck styles */
+.scarf-neck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 12px;
+  background: #9b1c1c;
+  border-radius: 12px;
+}
+/* Robot scarf tail styles */
+.scarf-tail {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  width: 15px;
+  height: 10px;
+  background: #9b1c1c;
+  border-radius: 5px;
+  transform: rotate(25deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Robot body container styles */
+.robot-body {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot chest plate styles */
+.chest-plate {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+  background: silver;
+  border-radius: 20px 20px 10px 10px;
+}
+
+/* Robot arm container styles */
+.robot-arm {
+  position: absolute;
+  top: 65px;
+  width: 12px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+
+/* Left robot arm styles */
+.arm-left {
+  left: calc(50% - 40px);
+  animation: waveArm 1.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Keyframes for arm waving animation */
+@keyframes waveArm {
+  0%, 100% {
+    transform: rotate(-200deg);
+  }
+  50% {
+    transform: rotate(-150deg);
+  }
+}
+
+/* Right robot arm styles */
+.arm-right {
+  right: calc(50% - 40px);
+  transform: rotate(-20deg);
+}
+
+/* Robot hand styles */
+.robot-hand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Robot leg container styles */
+.robot-leg {
+  position: absolute;
+  top: 120px;
+  width: 14px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+/* Left robot leg styles */
+.leg-left {
+  left: calc(50% - 20px);
+}
+/* Right robot leg styles */
+.leg-right {
+  right: calc(50% - 20px);
+}
+
+/* Leg wiggle animation class */
+.leg-wiggle {
+  animation: legMotion 1.5s infinite ease-in-out;
+}
+
+/* Keyframes for leg motion animation */
+@keyframes legMotion {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Robot foot styles */
+.robot-foot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #444;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Black quiz button override styles */
+.btn-quiz-black {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #000; 
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Black quiz button hover effect */
+.btn-quiz-black:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* HTML robot container styles */
+.my-html-robot {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  animation: jump 1.5s infinite ease-in-out; 
+}
+
+/* Keyframes for jump animation */
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
+}
+
+/* Robot antenna styles */
+.robot-antenna {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 15px;
+  background: silver;
+  border-radius: 2px;
+}
+.antenna-ball {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: silver;
+  border-radius: 50%;
+}
+
+/* Robot helmet styles */
+.robot-helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 60px;
+  background: silver;
+  border-radius: 50px 50px 40px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot visor styles */
+.robot-visor {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 35px;
+  background: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Robot eye styles */
+.robot-eye {
+  width: 8px;
+  height: 8px;
+  background: #39f;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #39f;
+  animation: blink 2.2s infinite;
+}
+
+/* Keyframes for blink animation */
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  48%, 52% { transform: scaleY(0); }
+}
+
+/* Robot scarf container styles */
+.robot-scarf {
+  position: absolute;
+  top: 45px;
+  z-index: 1;
+  left: 50%;
+  width: 60px;
+  height: 25px;
+  transform: translateX(-50%);
+}
+/* Robot scarf neck styles */
+.scarf-neck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 12px;
+  background: #9b1c1c;
+  border-radius: 12px;
+}
+/* Robot scarf tail styles */
+.scarf-tail {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  width: 15px;
+  height: 10px;
+  background: #9b1c1c;
+  border-radius: 5px;
+  transform: rotate(25deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Robot body container styles */
+.robot-body {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot chest plate styles */
+.chest-plate {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+  background: silver;
+  border-radius: 20px 20px 10px 10px;
+}
+
+/* Robot arm container styles */
+.robot-arm {
+  position: absolute;
+  top: 65px;
+  width: 12px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+
+/* Left robot arm styles */
+.arm-left {
+  left: calc(50% - 40px);
+  animation: waveArm 1.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Keyframes for arm waving animation */
+@keyframes waveArm {
+  0%, 100% {
+    transform: rotate(-200deg);
+  }
+  50% {
+    transform: rotate(-150deg);
+  }
+}
+
+/* Right robot arm styles */
+.arm-right {
+  right: calc(50% - 40px);
+  transform: rotate(-20deg);
+}
+
+/* Robot hand styles */
+.robot-hand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Robot leg container styles */
+.robot-leg {
+  position: absolute;
+  top: 120px;
+  width: 14px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+/* Left robot leg styles */
+.leg-left {
+  left: calc(50% - 20px);
+}
+/* Right robot leg styles */
+.leg-right {
+  right: calc(50% - 20px);
+}
+
+/* Leg wiggle animation class */
+.leg-wiggle {
+  animation: legMotion 1.5s infinite ease-in-out;
+}
+
+/* Keyframes for leg motion animation */
+@keyframes legMotion {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Robot foot styles */
+.robot-foot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #444;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Black quiz button override styles */
+.btn-quiz-black {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #000; 
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Black quiz button hover effect */
+.btn-quiz-black:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* HTML robot container styles */
+.my-html-robot {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  animation: jump 1.5s infinite ease-in-out; 
+}
+
+/* Keyframes for jump animation */
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
+}
+
+/* Robot antenna styles */
+.robot-antenna {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 15px;
+  background: silver;
+  border-radius: 2px;
+}
+.antenna-ball {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: silver;
+  border-radius: 50%;
+}
+
+/* Robot helmet styles */
+.robot-helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 60px;
+  background: silver;
+  border-radius: 50px 50px 40px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot visor styles */
+.robot-visor {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 35px;
+  background: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Robot eye styles */
+.robot-eye {
+  width: 8px;
+  height: 8px;
+  background: #39f;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #39f;
+  animation: blink 2.2s infinite;
+}
+
+/* Keyframes for blink animation */
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  48%, 52% { transform: scaleY(0); }
+}
+
+/* Robot scarf container styles */
+.robot-scarf {
+  position: absolute;
+  top: 45px;
+  z-index: 1;
+  left: 50%;
+  width: 60px;
+  height: 25px;
+  transform: translateX(-50%);
+}
+/* Robot scarf neck styles */
+.scarf-neck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 12px;
+  background: #9b1c1c;
+  border-radius: 12px;
+}
+/* Robot scarf tail styles */
+.scarf-tail {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  width: 15px;
+  height: 10px;
+  background: #9b1c1c;
+  border-radius: 5px;
+  transform: rotate(25deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Robot body container styles */
+.robot-body {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot chest plate styles */
+.chest-plate {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+  background: silver;
+  border-radius: 20px 20px 10px 10px;
+}
+
+/* Robot arm container styles */
+.robot-arm {
+  position: absolute;
+  top: 65px;
+  width: 12px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+
+/* Left robot arm styles */
+.arm-left {
+  left: calc(50% - 40px);
+  animation: waveArm 1.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Keyframes for arm waving animation */
+@keyframes waveArm {
+  0%, 100% {
+    transform: rotate(-200deg);
+  }
+  50% {
+    transform: rotate(-150deg);
+  }
+}
+
+/* Right robot arm styles */
+.arm-right {
+  right: calc(50% - 40px);
+  transform: rotate(-20deg);
+}
+
+/* Robot hand styles */
+.robot-hand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Robot leg container styles */
+.robot-leg {
+  position: absolute;
+  top: 120px;
+  width: 14px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+/* Left robot leg styles */
+.leg-left {
+  left: calc(50% - 20px);
+}
+/* Right robot leg styles */
+.leg-right {
+  right: calc(50% - 20px);
+}
+
+/* Leg wiggle animation class */
+.leg-wiggle {
+  animation: legMotion 1.5s infinite ease-in-out;
+}
+
+/* Keyframes for leg motion animation */
+@keyframes legMotion {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Robot foot styles */
+.robot-foot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #444;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Black quiz button override styles */
+.btn-quiz-black {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #000; 
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Black quiz button hover effect */
+.btn-quiz-black:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* HTML robot container styles */
+.my-html-robot {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  animation: jump 1.5s infinite ease-in-out; 
+}
+
+/* Keyframes for jump animation */
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
+}
+
+/* Robot antenna styles */
+.robot-antenna {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 15px;
+  background: silver;
+  border-radius: 2px;
+}
+.antenna-ball {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: silver;
+  border-radius: 50%;
+}
+
+/* Robot helmet styles */
+.robot-helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 60px;
+  background: silver;
+  border-radius: 50px 50px 40px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot visor styles */
+.robot-visor {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 35px;
+  background: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Robot eye styles */
+.robot-eye {
+  width: 8px;
+  height: 8px;
+  background: #39f;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #39f;
+  animation: blink 2.2s infinite;
+}
+
+/* Keyframes for blink animation */
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  48%, 52% { transform: scaleY(0); }
+}
+
+/* Robot scarf container styles */
+.robot-scarf {
+  position: absolute;
+  top: 45px;
+  z-index: 1;
+  left: 50%;
+  width: 60px;
+  height: 25px;
+  transform: translateX(-50%);
+}
+/* Robot scarf neck styles */
+.scarf-neck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 12px;
+  background: #9b1c1c;
+  border-radius: 12px;
+}
+/* Robot scarf tail styles */
+.scarf-tail {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  width: 15px;
+  height: 10px;
+  background: #9b1c1c;
+  border-radius: 5px;
+  transform: rotate(25deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Robot body container styles */
+.robot-body {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot chest plate styles */
+.chest-plate {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+  background: silver;
+  border-radius: 20px 20px 10px 10px;
+}
+
+/* Robot arm container styles */
+.robot-arm {
+  position: absolute;
+  top: 65px;
+  width: 12px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+
+/* Left robot arm styles */
+.arm-left {
+  left: calc(50% - 40px);
+  animation: waveArm 1.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Keyframes for arm waving animation */
+@keyframes waveArm {
+  0%, 100% {
+    transform: rotate(-200deg);
+  }
+  50% {
+    transform: rotate(-150deg);
+  }
+}
+
+/* Right robot arm styles */
+.arm-right {
+  right: calc(50% - 40px);
+  transform: rotate(-20deg);
+}
+
+/* Robot hand styles */
+.robot-hand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Robot leg container styles */
+.robot-leg {
+  position: absolute;
+  top: 120px;
+  width: 14px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+/* Left robot leg styles */
+.leg-left {
+  left: calc(50% - 20px);
+}
+/* Right robot leg styles */
+.leg-right {
+  right: calc(50% - 20px);
+}
+
+/* Leg wiggle animation class */
+.leg-wiggle {
+  animation: legMotion 1.5s infinite ease-in-out;
+}
+
+/* Keyframes for leg motion animation */
+@keyframes legMotion {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Robot foot styles */
+.robot-foot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #444;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Black quiz button override styles */
+.btn-quiz-black {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #000; 
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Black quiz button hover effect */
+.btn-quiz-black:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* HTML robot container styles */
+.my-html-robot {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  animation: jump 1.5s infinite ease-in-out; 
+}
+
+/* Keyframes for jump animation */
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
+}
+
+/* Robot antenna styles */
+.robot-antenna {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 15px;
+  background: silver;
+  border-radius: 2px;
+}
+.antenna-ball {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: silver;
+  border-radius: 50%;
+}
+
+/* Robot helmet styles */
+.robot-helmet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 60px;
+  background: silver;
+  border-radius: 50px 50px 40px 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot visor styles */
+.robot-visor {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 35px;
+  background: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Robot eye styles */
+.robot-eye {
+  width: 8px;
+  height: 8px;
+  background: #39f;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #39f;
+  animation: blink 2.2s infinite;
+}
+
+/* Keyframes for blink animation */
+@keyframes blink {
+  0%, 100% { transform: scaleY(1); }
+  48%, 52% { transform: scaleY(0); }
+}
+
+/* Robot scarf container styles */
+.robot-scarf {
+  position: absolute;
+  top: 45px;
+  z-index: 1;
+  left: 50%;
+  width: 60px;
+  height: 25px;
+  transform: translateX(-50%);
+}
+/* Robot scarf neck styles */
+.scarf-neck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 12px;
+  background: #9b1c1c;
+  border-radius: 12px;
+}
+/* Robot scarf tail styles */
+.scarf-tail {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  width: 15px;
+  height: 10px;
+  background: #9b1c1c;
+  border-radius: 5px;
+  transform: rotate(25deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Robot body container styles */
+.robot-body {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+/* Robot chest plate styles */
+.chest-plate {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+  background: silver;
+  border-radius: 20px 20px 10px 10px;
+}
+
+/* Robot arm container styles */
+.robot-arm {
+  position: absolute;
+  top: 65px;
+  width: 12px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+
+/* Left robot arm styles */
+.arm-left {
+  left: calc(50% - 40px);
+  animation: waveArm 1.5s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Keyframes for arm waving animation */
+@keyframes waveArm {
+  0%, 100% {
+    transform: rotate(-200deg);
+  }
+  50% {
+    transform: rotate(-150deg);
+  }
+}
+
+/* Right robot arm styles */
+.arm-right {
+  right: calc(50% - 40px);
+  transform: rotate(-20deg);
+}
+
+/* Robot hand styles */
+.robot-hand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Robot leg container styles */
+.robot-leg {
+  position: absolute;
+  top: 120px;
+  width: 14px;
+  height: 40px;
+  background: silver;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transform-origin: top center;
+}
+/* Left robot leg styles */
+.leg-left {
+  left: calc(50% - 20px);
+}
+/* Right robot leg styles */
+.leg-right {
+  right: calc(50% - 20px);
+}
+
+/* Leg wiggle animation class */
+.leg-wiggle {
+  animation: legMotion 1.5s infinite ease-in-out;
+}
+
+/* Keyframes for leg motion animation */
+@keyframes legMotion {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Robot foot styles */
+.robot-foot {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #444;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Black quiz button override styles */
+.btn-quiz-black {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #000; 
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Black quiz button hover effect */
+.btn-quiz-black:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* End of HTML robot and quiz button styles */
+
+/* Learn more button and study card override styles */
+.btn-primary, 
+.btn-learn-more-red, 
+.btn-resource-red, 
+.study-card {
+  background-color: #9b1c1c !important;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for primary, learn more, resource buttons and study cards */
+.btn-primary:hover,
+.btn-learn-more-red:hover,
+.btn-resource-red:hover,
+.study-card:hover {
+  background-color: #7d1515 !important;
+  transform: scale(1.05);
+}
+
+/* Learning card styles */
+.learning-card{
+  background-color: #131416;
+}
+.learning-card .card-title{
+  color: #FFF;
+}
+.learning-card .card-text{
+  color: #FFF;
+}
+
+/* Table text color for bordered table */
+#table-bordered{
+  color: #FFF;
+}
+
+/* Edit user container max width */
+#edit-user-container {
+  max-width: 600px;
+}
+
+/* Edit user card styling */
+.edit-user-card {
+  background-color: #fff;
+  color: #000; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.edit-user-card .card-title {
+  margin-bottom: 20px;
+}
+
+/* Cohort card styling */
+.cohort-card {
+  background-color: #131416; 
+  color: #fff;            
+  border: none;
+  border-radius: 10px;
+  padding: 30px;
+  padding-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cohort item styling */
+.cohort-item {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 20px;
+}
+.cohort-item:last-child {
+  border-bottom: none;
+}
+
+/* Cohort description styles */
+.cohort-description{
+  margin-left: 10px;
+}
+
+.cohort-description h4 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Cohort action container styles */
+.cohort-action{
+  margin-left: 20px;
+}
+
+/* Cohort description paragraph styles */
+.cohort-description p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+/* Learn more red button specific styling */
+.btn-learn-more-red {
+  background-color: #c81e2c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Learn more red button hover effect */
+.btn-learn-more-red:hover {
+  background-color: #a1121f;
+}
+
+/* Quiz container styling */
+.quiz-container {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Quiz title styles */
+.quiz-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Quiz question text styles */
+.quiz-question-text {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Quiz question container styles */
+.quiz-question {
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+/* Form check label styles */
+.form-check-label {
+  color: #000;
+}
+
+/* Form check input styles */
+.form-check-input {
+  margin-top: 0.3rem;
+  color: #FFF;
+}
+
+/* Quiz submit button styles */
+.quiz-submit-btn {
+  background-color: #c81e2c;
+  border: none;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Quiz submit button hover effect */
+.quiz-submit-btn:hover {
+  background-color: #a1121f;
+}
+
+/* Danger text styling */
+.text-danger {
+  color: #ff6961;
+}
+
+/* Utility class for hiding elements */
+.hidden {
+  display: none;
+}
+
+/* Alert with black background styles */
+.alert-black {
+  background-color: #131416;
+  color: white;
+  border: none;
+}
+
+/* Duplicate global styles for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #27282A;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Study bot container positioning */
+#studybot-container {
+  position: relative;
+}
+
+/* Study bot robot button styles */
+#studybot-robot {
+    position: fixed;
+    bottom: 50px;
+    padding-bottom: 30px;
+    right: 20px;
+    width: 90px;    
+    height: 90px;   
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1100;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+#studybot-robot:hover {
+    transform: scale(1.05);
+}
+
+/* Inner container for study bot robot */
+.robot-inner {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.75);
+}
+
+/* Positioning for study bot components */
+.studybot-antenna,
+.studybot-head,
+.studybot-body,
+.studybot-arm,
+.studybot-leg {
+  position: absolute;
+}
+
+/* Study bot antenna styles */
+.studybot-antenna {
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 1.5px;
+  transform: translateX(-50%);
+}
+.studybot-antenna-ball {
+  position: absolute;
+  top: -3px;
+  left: -1.5px;
+  width: 6px;
+  height: 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+
+/* Study bot head styles */
+.studybot-head {
+  left: 50%;
+  top: 12px;
+  width: 42px;
+  height: 28px;
+  background-color: #666;
+  border-radius: 20px 20px 15px 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transform: translateX(-50%);
+}
+/* Study bot eyes */
+.studybot-eyes {
+  position: absolute;
+  top: 5px;  
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Study bot single eyes */
+.studybot-eye {
+  width: 6px;
+  height: 6px;
+  background-color: #39f;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #39f;
+}
+/* Study bot mouth */
+.studybot-mouth {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 1px;
+}
+
+/* Study bot body styles */
+.studybot-body {
+  left: 50%;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transform: translateX(-50%);
+}
+/* Study bot chest */
+.studybot-chest {
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  width: 26px;
+  height: 16px;
+  background-color: #aaa;
+  border-radius: 4px;
+}
+/* Study bot arms */
+.studybot-arm {
+  width: 5px;
+  height: 15px;
+  background-color: #aaa;
+  border-radius: 2.5px;
+  transform-origin: top center;
+}
+/* Study bot left arm */
+.studybot-arm-left {
+  left: -8px; 
+  top: 8px;   
+}
+/* Study bot left hand */
+.studybot-hand-left {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 50%;
+}
+/* Study bot right arm */
+.studybot-arm-right {
+  right: -8px; 
+  top: 8px;
+}
+/* Study bot right hand */
+.studybot-hand-right {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 50%;
+}
+/* Study bot leg */
+.studybot-leg {
+  width: 5px;
+  height: 15px;
+  background-color: #aaa;
+  border-radius: 2.5px;
+  transform-origin: top center;
+}
+/* Study bot left leg */
+.studybot-leg-left {
+  left: 12px; 
+  top: 40px;  
+}
+/* Study bot left foot */
+.studybot-foot-left {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+/* Study bot right leg */
+.studybot-leg-right {
+  right: 12px;
+  top: 40px;
+}
+/* Study bot right foot */
+.studybot-foot-right {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Study bot bubble container styles */
+#studybot-bubble-container {
+  position: fixed;
+  bottom: 150px;
+  right: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  z-index: 1101;
+}
+
+/* Study bot bubble styles */
+#studybot-bubble {
+  position: relative;
+  width: 60px;
+  height: 40px;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  border: 3px solid black;
+  margin: 10px auto;
+}
+
+/* Speech tail styles for study bot bubble */
+.speech-tail {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.speech-tail::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid white;
+}
+
+/* Keyframes for bubble float animation */
+@keyframes bubbleFloat {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+/* Study bot chat window styles */
+#studybot-chat {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+  width: 320px;
+  max-height: 400px;
+  background-color: #131416;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  padding: 15px;
+  z-index: 1200;
+  overflow: hidden;
+  
+  display: none;
+}
+
+/* Chat opening animation class */
+.opening {
+  animation: chatExpand 0.35s forwards ease-out;
+}
+
+/* Chat closing animation class */
+.closing {
+  animation: chatShrink 0.35s forwards ease-in;
+}
+
+/* Keyframes for chat expansion animation */
+@keyframes chatExpand {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Keyframes for chat shrinking animation */
+@keyframes chatShrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Study bot chat header styles */
+.studybot-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+/* Study bot close button styles */
+.studybot-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.studybot-close:hover {
+  color: #ff6961;
+}
+
+/* Chat window content styles */
+.chat-window {
+  height: 150px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 5px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+.chat-message {
+  margin: 0 0 5px;
+}
+
+/* Chat input area styles */
+.chat-input-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  border-top: 1px solid #444;
+  padding: 10px;
+}
+/* Chat input field styles */
+.chat-input {
+  flex: 1;
+  border: 1px solid #444;
+  border-radius: 4px 0 0 4px;
+  padding: 5px;
+  background-color: #fff !important;
+  color: #000 !important; 
+}
+/* Chat send button styles */
+.chat-send {
+  border-radius: 0 4px 4px 0;
+  padding: 5px 10px;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.chat-send:hover {
+  background-color: #218838;
+}
+
+/* Hero wrapper container styles */
+.hero-wrapper {
+  max-width: 1100px;
+  margin-left: 70px;
+}

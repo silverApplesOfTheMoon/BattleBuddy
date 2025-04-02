@@ -1,0 +1,41 @@
+<!-- This template extends the shared layout for consistent styling -->
+{% extends "shared/layout.html" %}
+{% block content %}
+<!-- Main container for the Challenge Test page -->
+<div class="container mt-5 quiz-container">
+    <!-- Quiz Title with dynamic cohort name -->
+    <h2 class="text-center mb-4 quiz-title">Challenge Test: {{ cohort|title }}</h2>
+
+    <!-- Display result message if available -->
+    {% if result %}
+        <div class="alert alert-info text-center">
+            <h4>{{ result }}</h4>
+        </div>
+    {% endif %}
+
+    <!-- Quiz Form -->
+    <form method="post">
+        {% csrf_token %} <!-- CSRF token for form security -->
+
+        <!-- Loop through each question field in the form -->
+        {% for field in form %}
+        <div class="mb-4 quiz-question">
+            <!-- Display the question label -->
+            <p class="quiz-question-text"><strong>{{ field.label }}</strong></p>
+            <!-- Loop through each choice for the current question -->
+            {% for choice in field %}
+            <div class="form-check">
+                {{ choice.tag }} 
+                <label style="color: white;" class="form-check-label" for="{{ choice.id_for_label }}">{{ choice.choice_label }}</label>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg quiz-submit-btn">Submit Test</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

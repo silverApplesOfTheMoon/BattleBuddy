@@ -1,0 +1,26 @@
+<!-- This template extends the shared layout to provide a consistent error page design -->
+{% extends "shared/layout.html" %}
+
+{% block content %}
+<!-- Main content for the Error page -->
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+<!-- Display Request ID if available -->
+{% if request_id %}
+    <p>
+        <strong>Request ID:</strong> <code>{{ request_id }}</code>
+    </p>
+{% endif %}
+
+<!-- Additional Information for Development Mode -->
+<h3>Development Mode</h3>
+<p>
+    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+</p>
+<p>
+    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+    It can result in displaying sensitive information from exceptions to end users.
+    For local debugging, enable the <strong>DEBUG</strong> setting in Django's `settings.py` file and restart the app.
+</p>
+{% endblock %}

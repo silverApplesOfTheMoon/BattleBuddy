@@ -1,0 +1,106 @@
+<!-- Extends the shared layout template -->
+{% extends "shared/layout.html" %}
+{% block content %}
+<!-- Main container for Cybersecurity Training & Certifications page -->
+<div class="container mt-5 text-center">
+    <!-- Page Header -->
+    <h1 class="mb-4">Cybersecurity Training & Certifications</h1>
+
+    <!-- Study Materials Section -->
+    <div class="study-materials">
+        <!-- CompTIA Security+ Card -->
+        <a href="{% url 'study_description' 'CompTIA Security+' %}" class="study-card">
+            <i class="fas fa-shield-alt"></i>
+            <div class="study-text">CompTIA Security+</div>
+        </a>
+        <!-- Introduction to Cybersecurity Card -->
+        <a href="{% url 'study_description' 'Introduction to Cybersecurity' %}" class="study-card">
+            <i class="fas fa-lock"></i>
+            <div class="study-text">Introduction to Cybersecurity</div>
+        </a>
+        <!-- Certified Ethical Hacker Card -->
+        <a href="{% url 'study_description' 'Certified Ethical Hacker' %}" class="study-card">
+            <i class="fas fa-user-secret"></i>
+            <div class="study-text">Certified Ethical Hacker</div>
+        </a>
+        <!-- Google Cybersecurity Training Card -->
+        <a href="{% url 'study_description' 'Google Cybersecurity Training' %}" class="study-card">
+            <i class="fab fa-google"></i>
+            <div class="study-text">Google Cybersecurity Training</div>
+        </a>
+        <!-- Stanford Advanced Cybersecurity Card -->
+        <a href="{% url 'study_description' 'Stanford Advanced Cybersecurity' %}" class="study-card">
+            <i class="fas fa-university"></i>
+            <div class="study-text">Stanford Advanced Cybersecurity</div>
+        </a>
+        <!-- IBM Cybersecurity Analyst Card -->
+        <a href="{% url 'study_description' 'IBM Cybersecurity Analyst' %}" class="study-card">
+            <i class="fab fa-ibm"></i>
+            <div class="study-text">IBM Cybersecurity Analyst</div>
+        </a>
+    </div>
+    <!-- End of Study Materials Section -->
+
+    <!-- Quiz Bot Section -->
+    <div class="quiz-bot-section">
+        <p>Test your cybersecurity skills with the Challenge Bot!</p>
+
+        <!-- Red container with the robot and black challenge button -->
+        <div class="challenge-bot-red">
+            <div class="my-html-robot">
+                <!-- Robot Antenna -->
+                <div class="robot-antenna">
+                    <div class="antenna-ball"></div>
+                </div>
+
+                <!-- Robot Helmet and Visor -->
+                <div class="robot-helmet">
+                    <div class="robot-visor">
+                        <!-- Robot Eyes -->
+                        <div class="robot-eye eye-left"></div>
+                        <div class="robot-eye eye-right"></div>
+                    </div>
+                </div>
+
+                <!-- Robot Scarf (neck and tail) -->
+                <div class="robot-scarf">
+                    <div class="scarf-neck"></div>
+                    <div class="scarf-tail"></div>
+                </div>
+
+                <!-- Robot Body with blue chest plate -->
+                <div class="robot-body">
+                    <div class="chest-plate"></div>
+                </div>
+
+                <!-- Robot Left Arm -->
+                <div class="robot-arm arm-left">
+                    <div class="robot-hand hand-left"></div>
+                </div>
+                <!-- Robot Right Arm -->
+                <div class="robot-arm arm-right">
+                    <div class="robot-hand hand-right"></div>
+                </div>
+
+                <!-- Robot Legs with blue feet -->
+                <div class="robot-leg leg-left leg-wiggle">
+                    <div class="robot-foot foot-left"></div>
+                </div>
+                <div class="robot-leg leg-right leg-wiggle">
+                    <div class="robot-foot foot-right"></div>
+                </div>
+            </div>
+            <!-- End of Robot Design -->
+
+            <!-- Black Challenge Button -->
+            <a href="{% url 'challenge_test' cohort='cybersecurity' %}" class="btn-quiz-black">Take the Challenge</a>
+        </div>
+        <!-- End of Quiz Bot Section -->
+    </div>
+
+    <!-- Conditional inclusion of Study Helper Bot for authenticated current students -->
+    {% if request.user.is_authenticated and request.user.student_type == "Current" %}
+        {% include "shared/_study_helper_bot.html" %}
+    {% endif %}
+</div>
+{% endblock %}

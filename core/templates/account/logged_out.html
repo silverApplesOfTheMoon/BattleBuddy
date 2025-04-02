@@ -1,0 +1,16 @@
+<!-- Extend base layout -->
+{% extends "shared/layout.html" %}
+
+<!-- Content block starts here -->
+{% block content %}
+<div class="container mt-5"> <!-- Bootstrap container with margin -->
+    <h2>You have been logged out</h2> <!-- Message -->
+    <p>Thank you for visiting! You have successfully logged out.</p>
+    <p>
+        <!-- Link to login page -->
+        <a href="{% url 'login' %}" class="btn btn-primary">Log In Again</a> or
+        <!-- Link to home page -->
+        <a href="{% url 'home' %}" class="btn btn-secondary">Return to Home</a>
+    </p>
+</div>
+{% endblock %}

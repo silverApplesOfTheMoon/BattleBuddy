@@ -1,0 +1,36 @@
+<!-- This template extends the shared layout and loads internationalization for translations -->
+{% extends "shared/layout.html" %}
+{% load i18n %}
+
+{% block content %}
+<!-- Main container for the Description page -->
+<div class="container mt-5">
+    <!-- Page Title -->
+    <h1 class="text-center mb-4">{{ title }}</h1>
+
+    <!-- Study Description Section -->
+    <div class="study-description-box">
+        <p>{{ description }}</p>
+    </div>
+
+    <!-- Skills Section (displayed if skills data is available) -->
+    {% if skills %}
+    <div class="skills-section mt-4">
+        <h4>{% trans "Skills You Will Learn" %}</h4>
+        <p>{{ skills }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Resource Link Section -->
+    <div class="text-center mt-4">
+        <a href="{{ resource_url }}" target="_blank" class="btn-resource-red">
+            <i class="fas fa-external-link-alt"></i> {% trans "Open Resource" %}
+        </a>
+    </div>
+
+    <!-- Include Study Helper Bot if the user is authenticated and a Current Student -->
+    {% if request.user.is_authenticated and request.user.student_type == "Current" %}
+        {% include "shared/_study_helper_bot.html" %}
+    {% endif %}
+</div>
+{% endblock %}

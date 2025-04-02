@@ -1,0 +1,127 @@
+{% extends "shared/layout.html" %} <!-- Extends the shared layout template -->
+{% load static %} <!-- Loads the static files template tag library -->
+{% load i18n %} <!-- Loads the internationalization template tag library -->
+{% block content %} <!-- Begins the content block to be overridden -->
+
+<!-- Hero Section -->
+<section class="container mt-5 d-flex justify-content-center">
+    <div class="row align-items-center hero-wrapper w-100" style="max-width: 1200px;">
+        <!-- Hero Text Column -->
+        <div class="col-md-7 hero-text">
+            <!-- Main Hero Heading -->
+            <h1 class="mb-3 text-gradient">{% trans "Start Your Tech Journey Today" %}</h1>
+
+            <!-- Progress Bar Section -->
+            <div class="progress-container">
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                        {% trans "Track Your Progress" %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Description Paragraph -->
+            <p class="hero-description">
+                {% trans "Welcome to Washington Vets 2 Tech, your dedicated pathway to a career in technology." %}
+                {% trans "Whether you’re a veteran, a military spouse, or a tech enthusiast, we provide structured entrance exams, interactive learning modules, and study materials to help you succeed." %}
+            </p>
+
+            <!-- List of Key Points -->
+            <ul class="hero-list">
+                <li><i class="fas fa-check-circle"></i> {% trans "Learn cloud computing, cybersecurity, and software development." %}</li>
+                <li><i class="fas fa-check-circle"></i> {% trans "Get hands-on training with industry-leading tools." %}</li>
+                <li><i class="fas fa-check-circle"></i> {% trans "Prepare for real-world certification exams." %}</li>
+            </ul>
+        </div>
+
+        <!-- Hero Image Column -->
+        <div class="col-md-5 text-center mt-4 mt-md-0">
+            <div class="family-image shadow-lg">
+                <img src="{% static 'images/family_military.jpg' %}" alt="{% trans 'Military family' %}" class="rounded">
+                <!-- Call-to-Action Button -->
+                <a href="{% url 'register' %}" class="btn btn-primary mt-3 btn-lg shadow">{% trans "Get Started" %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Hero Section -->
+
+<!-- Cohort Path Section -->
+<section class="container py-5">
+    <!-- Section Title -->
+    <h2 class="text-center section-title">{% trans "Choose Your Cohort" %}</h2>
+
+    <!-- Loop through cohorts for dynamic display -->
+    {% for cohort in cohort_visibility %}
+        {% if cohort.name == "Server & Cloud Applications" and cohort.enabled %}
+            <!-- Server & Cloud Cohort Card -->
+            <article class="card cohort-card mt-4 mx-auto">
+                <div class="card-body d-flex align-items-center">
+                    <div class="cohort-icon me-3">
+                        <img src="{% static 'images/cloud-server.png' %}" alt="{% trans 'Server & Cloud Icon' %}" style="width:80px;">
+                    </div>
+                    <div class="cohort-description flex-grow-1">
+                        <h4>{% trans "Server & Cloud Applications" %}</h4>
+                        <p><strong>{% trans "Type of Work:" %}</strong> {% trans "Managing virtual machines, configuring cloud services, and ensuring systems remain efficient and scalable." %}</p>
+                        <p><strong>{% trans "Ideal Candidate:" %}</strong> {% trans "Organized, detail-oriented individuals comfortable working behind the scenes to maintain infrastructure reliability." %}</p>
+                    </div>
+                    <div class="cohort-action">
+                        <a href="{% url 'server_cloud' %}" class="btn btn-learn-more-red">{% trans "Explore" %}</a>
+                    </div>
+                </div>
+            </article>
+        {% endif %}
+        
+        {% if cohort.name == "Cloud Application Development" and cohort.enabled %}
+            <!-- Cloud Application Development Cohort Card -->
+            <article class="card cohort-card mt-4 mx-auto">
+                <div class="card-body d-flex align-items-center">
+                    <div class="cohort-icon me-3">
+                        <img src="{% static 'images/cloud_application.png' %}" alt="{% trans 'Cloud App Dev Icon' %}" style="width:80px;">
+                    </div>
+                    <div class="cohort-description flex-grow-1">
+                        <h4>{% trans "Cloud Application Development" %}</h4>
+                        <p><strong>{% trans "Type of Work:" %}</strong> {% trans "Designing and coding applications that run on AWS, Azure, GCP, or other cloud platforms." %}</p>
+                        <p><strong>{% trans "Ideal Candidate:" %}</strong> {% trans "Creative problem-solvers who enjoy writing code and building modern software solutions." %}</p>
+                    </div>
+                    <div class="cohort-action">
+                        <a href="{% url 'cloud_app_development' %}" class="btn btn-learn-more-red">{% trans "Explore" %}</a>
+                    </div>
+                </div>
+            </article>
+        {% endif %}
+        
+        {% if cohort.name == "Cybersecurity Administration" and cohort.enabled %}
+            <!-- Cybersecurity Administration Cohort Card -->
+            <article class="card cohort-card mt-4 mx-auto">
+                <div class="card-body d-flex align-items-center">
+                    <div class="cohort-icon me-3">
+                        <img src="{% static 'images/cyber.png' %}" alt="{% trans 'Cybersecurity Icon' %}" style="width:80px;">
+                    </div>
+                    <div class="cohort-description flex-grow-1">
+                        <h4>{% trans "Cybersecurity Administration" %}</h4>
+                        <p><strong>{% trans "Type of Work:" %}</strong> {% trans "Protecting networks, systems, and data from cyber threats and vulnerabilities." %}</p>
+                        <p><strong>{% trans "Ideal Candidate:" %}</strong> {% trans "Analytical thinkers who thrive under pressure and enjoy safeguarding critical infrastructure." %}</p>
+                    </div>
+                    <div class="cohort-action">
+                        <a href="{% url 'cybersecurity' %}" class="btn btn-learn-more-red">{% trans "Explore" %}</a>
+                    </div>
+                </div>
+            </article>
+        {% endif %}
+    {% endfor %}
+    <!-- End of Cohort Cards -->
+  
+</section>
+<!-- End of Cohort Path Section -->
+
+<!-- Cohort Quiz Section -->
+<section style="margin-bottom: 100px;" class="text-center mb-5">
+    <!-- Cohort Quiz Call-to-Action Button -->
+    <a href="{% url 'cohort_quiz' %}" class="btn btn-primary btn-lg" role="button" aria-label="{% trans 'Take the Cohort Quiz' %}" tabindex="0">
+        {% trans "Take the Cohort Quiz" %}
+    </a>
+</section>
+<!-- End of Cohort Quiz Section -->
+
+{% endblock %}

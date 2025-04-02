@@ -1,0 +1,39 @@
+<!-- This file extends the shared layout to maintain consistent styling -->
+{% extends "shared/layout.html" %}
+
+{% block content %}
+<!-- Main container for Manage Users page -->
+<div class="container mt-5">
+    <!-- Page Heading -->
+    <h2>Manage Users</h2>
+    <!-- Table for displaying users and available actions -->
+    <table id="table-bordered" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Student Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- Loop through each user -->
+        {% for user in users %}
+            <tr>
+                <!-- Display user's full name -->
+                <td>{{ user.full_name }}</td>
+                <!-- Display user's email -->
+                <td>{{ user.email }}</td>
+                <!-- Display user's student type -->
+                <td>{{ user.student_type }}</td>
+                <!-- Action buttons for editing and deleting a user -->
+                <td>
+                    <a href="{% url 'edit_user' user.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="{% url 'delete_user' user.id %}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
